@@ -7,20 +7,25 @@
  */
 int main(void)
 {
-	int count = 50;
-	long long int fib1 = 1;
-	long long int fib2 = 2;
+	int count;
+	unsigned long int fib1 = 1;
+	unsigned long int fib2 = 2;
+	unsigned long int fib3 = fib1 + fib2;
 
-	printf("%lld, %lld", fib1, fib2);
+	printf("%ld", fib1);
+	printf("%ld", fib2);
 
-	for (int i = 3; i <= count; i++)
+	for (count = 0; count <= 47; count++)
 	{
-		long long int fib3 = fib1 + fib2;
-
-		printf("%lld ", fib3);
-
 		fib1 = fib2;
 		fib2 = fib3;
+
+		printf("%ld ", fib3);
+
+		if (count != 47)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 	return (0);
