@@ -13,13 +13,13 @@ int main(void)
 
 	while (a < 4000000)
 	{
-		int sum = a + b;
-		a = b;
-		b = sum;
-		if (a % 2 == 0)
+		if (a % 2 == a)
 		{
 			sum += a;
 		}
+		sum = a + b;
+		a = b;
+		b = sum;
 	}
 	printf("%d", sum);
 	return (0);
