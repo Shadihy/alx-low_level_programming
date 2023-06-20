@@ -21,7 +21,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fib3;
 
-		printf("%ld ", fib3);
+		printf("%ld", fib3);
 		if (t != 47)
 		{
 			printf(", ");
