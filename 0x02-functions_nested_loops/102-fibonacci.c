@@ -12,8 +12,8 @@ int main(void)
 	unsigned long int fib2 = 2;
 	unsigned long int fib3 = 0;
 
-	printf("%ld,", fib1);
-	printf("%ld,", fib2);
+	printf("%ld, ", fib1);
+	printf("%ld, ", fib2);
 
 	for (t = 0; t <= 47; t++)
 	{
