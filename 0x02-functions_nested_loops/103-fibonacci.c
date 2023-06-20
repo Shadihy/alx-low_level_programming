@@ -17,7 +17,8 @@ int main(void)
 		{
 			sum += a;
 		}
-		sum = a + b;
+		int sum = a + b;
+
 		a = b;
 		b = sum;
 	}
