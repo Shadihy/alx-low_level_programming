@@ -2,28 +2,28 @@
 
 /**
  * rot13 - Encodes a string using rot13.
- * @str: The string to be encoded.
+ * @s: The string to be encoded.
  *
  * Return: A pointer to the encoded string.
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	char *tar = str;
+	char *t = s;
 
-	while (*tar != '\0')
+	while (*t != '\0')
 	{
-		if ((*tar >= 'A' && *tar <= 'M') ||
-				(*tar >= 'a' && *tar <= 'm'))
+		if ((*t >= 'A' && *t <= 'M') ||
+				(*t >= 'a' && *t <= 'm'))
 		{
-			*tar += 13;
+			*t += 13;
 		}
-		else if ((*tar >= 'N' && *tar <= 'Z') ||
-				(*tar >= 'n' && *tar <= 'z'))
+		else if ((*t >= 'N' && *t <= 'Z') ||
+				(*t >= 'n' && *t <= 'z'))
 		{
-			*tar -= 13;
+			*t -= 13;
 		}
-		tar++;
+		t++;
 	}
 
-	return (str);
+	return (s);
 }
