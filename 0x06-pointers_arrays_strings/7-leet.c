@@ -2,36 +2,23 @@
 
 /**
  * leet - Encodes a string to 1337.
- * @str: The string to be encoded.
+ * @s: The string to be encoded.
  *
  * Return: A pointer to the encoded string.
  */
-char *leet(char *str)
+char *leet(char *s)
 {
-	char *tar = str;
-	char *tars = "aAeEoOtTlL";
-	char *repl = "4433007711";
+	int i, j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-	while (*tar != '\0')
+	for (i = 0; *(s + i); i++)
 	{
-		int i = 0;
-		int j = 0;
-
-		while (tars[i] != '\0')
+		for (j = 0; j <= 9; j++)
 		{
-			if (*tar == tars[i])
-			{
-				*tar = repl[i];
-				j = 1;
-				break;
-			}
-			i++;
-		}
-
-		if (!j)
-		{
-			tar++;
+			if (a[j] == s[i])
+				s[i] = b[j];
 		}
 	}
-	return (str);
+	return (s);
 }
