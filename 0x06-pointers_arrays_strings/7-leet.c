@@ -9,8 +9,8 @@
 char *leet(char *str)
 {
 	char *tar = str;
-	const char *tars = "aAeEoOtTlL";
-	const char *repl = "4433007711";
+	char *tars = "aAeEoOtTlL";
+	char *repl = "4433007711";
 
 	while (*tar != '\0')
 	{
