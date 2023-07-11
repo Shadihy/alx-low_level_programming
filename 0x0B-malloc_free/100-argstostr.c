@@ -12,24 +12,24 @@
  */
 char *argstostr(int ac, char **av)
 {
-    int i, j, k = 0;
-    char *con = NULL;
+	int i, j, k = 0;
+	char *con = NULL;
 
-    if (ac == 0 || av == NULL)
-        return (NULL);
-    for (i = 0; i < ac; i++)
-        for (j = 0; av[i][j] != '\0'; j++)
-            k++;
-    con = malloc(sizeof(char) * (k + ac + 1));
-    if (con == NULL)
-        return (NULL);
-    for (i = 0, k = 0; i < ac; i++)
-    {
-        for(j = 0; av[i][j] != '\0'; j++, k++)
-            con[k] = av[i][j];
-        con[k] = '\n';
-        k++; 
-    }
-    con[k] = '\0';
-    return (con);
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+		for (j = 0; av[i][j] != '\0'; j++)
+			k++;
+	con = malloc(sizeof(char) * (k + ac + 1));
+	if (con == NULL)
+		return (NULL);
+	for (i = 0, k = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, k++)
+			con[k] = av[i][j];
+		con[k] = '\n';
+		k++;
+	}
+	con[k] = '\0';
+	return (con);
 }
