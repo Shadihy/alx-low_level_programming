@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_name - print name and pass to pointer f
@@ -15,6 +16,5 @@ void print_name(char *name, void (*f)(char *))
 	{
 		return;
 	}
-
 	f(name);
 }
